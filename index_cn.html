@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>MoonPlayer - 多合一的视频播放器</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="files/style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/coslyk/moonplayer/develop/res/AppIcon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <p><a href="index.html">English</a> | 中文</p>
+    </header>
+
+    <main>
+    <div class="moonplayer-contentwrap-outer">
+        <img src="files/icon.png" class="icon">
+        <div class="moonplayer-contentwrap-header">
+            <h1>MoonPlayer</h1>
+            <p class="tagline">多合一的视频播放器，支持在线播放Youtube、B站等以及本地视频</p>
+            <p>
+                <a href="#install">安装</a>&nbsp;
+                <a href="https://github.com/coslyk/moonplayer/wiki/BrowserExtensionZH">浏览器扩展</a>&nbsp;
+                <a href="https://github.com/coslyk/moonplayer/wiki/UpdateLogZH">更新日志</a>&nbsp;
+                <a href="https://github.com/coslyk/moonplayer/wiki/ContributeZH">捐助</a>&nbsp;
+            </p>
+        </div>
+        <div class="moonplayer-contentwrap-inner">
+            <!--<p><a href="">Features</a> &nbsp; <a href="">Installation</a> &nbsp; <a href="">Development</a> &nbsp; <a href="">License</a></p>-->
+            <h2 class="features">特性</h2>
+            <p>MoonPlayer 是一个有趣的播放器，让您轻松享受观看视频的乐趣，轻松在线观看或下载来自Youtube、B站、优酷等诸多网站的视频。</p>
+        </div>
+        <div class="moonplayer-carousel">
+            <span class="carousel-target" id="carousel-target1"></span>
+            <span class="carousel-target" id="carousel-target2"></span>
+            <span class="carousel-target" id="carousel-target3"></span>
+            <span class="carousel-target" id="carousel-target4"></span>
+            <span class="carousel-target" id="carousel-target5"></span>
+            <span class="carousel-target" id="carousel-target6"></span>
+            <div id="carousel-item1" class="carousel-item">
+                <a href="#carousel-target2" class="carousel-link-right"><img src="files/next.png"></a>
+                <img id="screenshot1" class="screenshot1 screenshot" src="files/screenshot-play.png">
+                <p>轻松、优雅的视频打开方式！</p>
+            </div>
+            <div id="carousel-item2" class="carousel-item">
+                <a href="#carousel-target1" class="carousel-link-left"><img src="files/prev.png"></a>
+                <a href="#carousel-target3" class="carousel-link-right"><img src="files/next.png"></a>
+                <img id="screenshot2" class="screenshot" src="files/screenshot-bilibili.png">
+                <p>随心所欲地浏览、播放在线视频！</p>
+            </div>
+            <div id="carousel-item3" class="carousel-item">
+                <a href="#carousel-target2" class="carousel-link-left"><img src="files/prev.png"></a>
+                <a href="#carousel-target4" class="carousel-link-right"><img src="files/next.png"></a>
+                <img id="screenshot3" class="screenshot" src="files/screenshot-url-cn.png">
+                <p>播放任意网站的在线视频！</p>
+            </div>
+            <div id="carousel-item4" class="carousel-item">
+                <a href="#carousel-target3" class="carousel-link-left"><img src="files/prev.png"></a>
+                <a href="#carousel-target5" class="carousel-link-right"><img src="files/next.png"></a>
+                <img id="screenshot4" class="screenshot" src="files/screenshot-danmaku2.png">
+                <p>支持弹幕！</p>
+            </div>
+            <div id="carousel-item5" class="carousel-item">
+                <a href="#carousel-target4" class="carousel-link-left"><img src="files/prev.png"></a>
+                <a href="#carousel-target6" class="carousel-link-right"><img src="files/next.png"></a>
+                <img id="screenshot5" class="screenshot" src="files/screenshot-download-cn.png">
+                <p>还可以下载视频！</p>
+            </div>
+            <div id="carousel-item6" class="carousel-item">
+                <a href="#carousel-target5" class="carousel-link-left"><img src="files/prev.png"></a>
+                <img id="screenshot6" class="screenshot" src="files/screenshot-hwdec-cn.png">
+                <p>完美支持硬件解码！</p>
+            </div>
+        </div>
+        <div class="moonplayer-contentwrap-inner">
+            <p>亮点：</p>
+            <ul>
+                <li>酷</li>
+                <li>很酷</li>
+                <li>非常酷</li>
+                <li>界面美观，轻量小巧</li>
+                <li>基于MPV内核，能播放几乎所有视频格式</li>
+                <li>专注于在线播放，但也支持本地视频，能加载弹幕</li>
+                <li>支持用 <a href="https://github.com/coslyk/moonplayer-plugins" class="external">插件</a> 扩展程序</li>
+            </ul>
+            <h2 id="install">安装</h2>
+            <h3>Windows / macOS</h3>
+            <p>从 <a href="https://github.com/coslyk/moonplayer/releases/latest" class="external">Release page</a> 下载安装包。</p>
+            <h3>Linux</h3>
+            <p>可以使用 <a href="https://github.com/coslyk/moonplayer/releases/latest" class="external">AppImage</a> 或通过 <a href="https://flathub.org/apps/details/com.github.coslyk.MoonPlayer" class="external">Flatpak</a> 安装。</p>
+            <h3>Debian</h3>
+            <p>添加 <a href="https://github.com/coslyk/debianopt-repo" class="external">DebianOpt</a> 源，然后 <code>sudo apt install moonplayer</code>。</p>
+            <h3>ArchLinux & Manjaro</h3>
+            <p>添加 <a href="https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/" class="external">ArchLinuxCN</a> 源，然后 <code>pacman -S moonplayer</code>。</p>
+            <h2>开发</h2>
+            <p>软件源代码托管在 <a href="https://github.com/coslyk/moonplayer" class="external">GitHub</a>。如果您发现了问题或者有改进建议，请提交到 <a href="https://github.com/coslyk/moonplayer/issues" class="external">issue tracker</a>。</p>
+            <h2>捐助</h2>
+            <p>MoonPlayer 是免费软件。如果你觉得它不错，请 <a href="https://github.com/coslyk/moonplayer/wiki/ContributeZH" class="external">捐助我们</a>。您的支持就是我们的动力！</p>
+            <h2>许可协议</h2>
+            <p>MoonPlayer 是在 GPL version 3 or later 许可证下发行。请阅读 <a href="https://github.com/coslyk/moonplayer/blob/develop/LICENSE" class="external">LICENSE</a> 文件获取详情。</p>
+		</div>
+	</div>
+	</main>
+	<footer>
+	    <hr>
+		<p>© 2020 coslyk (cos.lyk@gmail.com, <a href="https://github.com/coslyk" class="external">GitHub</a>)</p>
+	</footer>
+
+
+</body></html>
