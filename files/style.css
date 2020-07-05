@@ -1,0 +1,218 @@
+html {
+    height: 100%;
+}
+body {
+    margin: auto;
+    background: #f6f5f4;
+    line-height: 26px;
+    color: #222;
+    height: 100%;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-size: 32px;
+    margin-top: 7px;
+    margin-bottom: 31px;
+}
+h1.summary {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+h2 {
+    font-size: 24px;
+    margin-top: 38px;
+    margin-bottom: 15px;
+}
+h3 {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+p {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+code {
+    background-color: #ddd;
+    padding-left: 5pt;
+    padding-right: 5pt;
+}
+time {
+    color: #999;
+}
+a {
+    color: #1a5fb4;
+}
+a.external {
+    background: url('external-link.png') no-repeat;
+    background-position: right center;
+    padding-right: 18px;
+}
+article img {
+    border: 1px solid #bbb;
+}
+div.image {
+    color: #333;
+    font-family: arial, sans-serif;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+ul {
+    padding: 0px;
+}
+header {
+    margin: auto;
+    width: 860px;
+    margin-bottom: 50px;
+}
+main {
+    margin: auto;
+    max-width: 1200px;
+    margin-top: -93px;
+    min-height: 100%;
+}
+div.contentwrap {
+    margin: auto;
+    width: 700px;
+    overflow: auto;
+    padding-top: 93px;
+    padding-bottom: 97px;
+}
+footer {
+    margin: auto;
+    width: 700px;
+    position: relative;
+    margin-top: -56px;
+    height: 54px;
+    clear: both;
+}
+
+/* setzer website */
+
+div.moonplayer-contentwrap-outer {
+    margin: auto;
+    max-width: 1000px;
+    overflow: auto;
+    padding-top: 91px;
+    padding-bottom: 97px;
+}
+div.moonplayer-contentwrap-inner {
+    margin: auto;
+    width: 880px;
+    clear: both;
+}
+div.moonplayer-contentwrap-inner-wide {
+    margin: auto;
+    clear: both;
+}
+div.moonplayer-carousel {
+    margin: auto;
+    width: 960px;
+    clear: both;
+    height: 562px;
+    position: relative;
+}
+span.carousel-target {
+    display: none;
+}
+div.moonplayer-carousel div.carousel-item {
+    width: 960px;
+    display: none;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f6f5f4;
+}
+div.moonplayer-carousel #carousel-item1 {
+    display: block;
+    z-index: 1;
+}
+div.moonplayer-carousel #carousel-target1:target ~ #carousel-item1 {
+    display: block;
+    z-index: 2;
+}
+div.moonplayer-carousel #carousel-target2:target ~ #carousel-item2 {
+    display: block;
+    z-index: 2;
+}
+div.moonplayer-carousel #carousel-target3:target ~ #carousel-item3 {
+    display: block;
+    z-index: 2;
+}
+div.moonplayer-carousel #carousel-target4:target ~ #carousel-item4 {
+    display: block;
+    z-index: 2;
+}
+div.moonplayer-carousel #carousel-target5:target ~ #carousel-item5 {
+    display: block;
+    z-index: 2;
+}
+div.moonplayer-carousel #carousel-target6:target ~ #carousel-item6 {
+    display: block;
+    z-index: 2;
+}
+div.moonplayer-carousel a.carousel-link-left {
+    float: left;
+    display: block;
+    width: 15px;
+    height: 23px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 1px;
+    margin-top: 232px;
+    outline: none;
+}
+div.moonplayer-carousel a.carousel-link-right {
+    float: right;
+    display: block;
+    width: 15px;
+    height: 23px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 1px;
+    padding-left: 2px;
+    margin-top: 232px;
+    outline: none;
+}
+div.moonplayer-carousel div.carousel-item img.screenshot {
+    margin-left: 40px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    display: block;
+}
+div.moonplayer-carousel div.carousel-item p {
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+}
+div.moonplayer-contentwrap-header {
+    padding-left: 46px;
+    margin-bottom: 38px;
+    float:left;
+}
+div.moonplayer-contentwrap-outer img.icon {
+    float: left;
+    padding-left: 88px;
+}
+div.moonplayer-contentwrap-outer h1 {
+    margin-bottom: 18px;
+    padding-top: 2px;
+}
+div.moonplayer-contentwrap-outer h2 {
+    margin-bottom: 14px;
+}
+div.moonplayer-contentwrap-outer p.tagline {
+    margin-bottom: 21px;
+}
+div.moonplayer-contentwrap-inner li {
+    margin-left: 30px;
+}
+
+
