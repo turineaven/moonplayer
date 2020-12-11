@@ -26,7 +26,7 @@
 
 void Utils::checkUpdate()
 {
-    QUrl url(QStringLiteral("https://raw.githubusercontent.com/coslyk/moonplayer/develop/CMakeLists.txt"));
+    QUrl url(QStringLiteral("https://raw.githubusercontent.com/turineaven/moonplayer/develop/CMakeLists.txt"));
     QNetworkReply* reply = NetworkAccessManager::instance()->get(QNetworkRequest(url));
     QObject::connect(reply, &QNetworkReply::finished, [=]() {
         static QRegularExpression re(QStringLiteral("project\\(moonplayer VERSION (\\d+\\.\\d+)\\)"));
