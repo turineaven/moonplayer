@@ -69,6 +69,12 @@ void Graphics::detectOpenGLEarly()
             qputenv("QT_XCB_GL_INTEGRATION", QByteArrayLiteral("xcb_egl"));
         }
     }
+
+    if (qgetenv("XDG_SESSION_TYPE") == "wayland" &&
+        qgetenv("QT_QPA_PLATFORM").isEmpty()) {
+        qputenv("QT_QPA_PLATFORM", "wayland");
+        qunsetenv("XDG_SESSION_TYPE");
+    }
 }
 
 
