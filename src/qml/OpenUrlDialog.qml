@@ -21,10 +21,11 @@ import MoonPlayer 1.0
 
 Dialog {
     id: openUrlDialog
-    width: 350
+    width: (parent.width * 2 / 3)
     height: 210
     title: qsTr("Enter URL to parse")
     standardButtons: Dialog.Ok | Dialog.Cancel
+    focus: true
 
     onAccepted: {
         if (openUrlInput.text !== "")
@@ -50,7 +51,63 @@ Dialog {
             selectByMouse: true
             Layout.fillWidth: true
             height: 30
+            focus: true
             onAccepted: openUrlDialog.accept()
+            MouseArea {
+                anchors.fill: parent
+                cursorShape: Qt.IBeamCursor
+                acceptedButtons: Qt.RightButton
+                onClicked: {
+                    var start = openUrlInput.selectionStart;
+                    var end = openUrlInput.selectionEnd;
+                    contextMenu.x = mouse.x;
+                    contextMenu.y = mouse.y;
+                    contextMenu.open();
+                    openUrlInput.select(start, end);
+                }
+            }
+
+            Menu {
+                id: contextMenu
+                MenuItem {
+                    text: "Cu&t"
+                    onTriggered: {
+                        openUrlInput.cut()
+                    }
+                }
+                MenuItem {
+                    text: "&Copy"
+                    onTriggered: {
+                        openUrlInput.copy()
+                    }
+                }
+                MenuItem {
+                    text: "&Paste"
+                    onTriggered: {
+                        openUrlInput.paste()
+                    }
+                }
+                MenuItem {
+                    text: "Paste && Go"
+                    onTriggered: {
+                        openUrlInput.paste()
+                        openUrlDialog.accept()
+                    }
+                }
+                MenuItem {
+                    text: "&Delete"
+                    onTriggered: {
+                        openUrlInput.remove(openUrlInput.selectionStart, openUrlInput.selectionEnd)
+                        openUrlInput.deselect()
+                    }
+                }
+                MenuItem {
+                    text: "Select &All"
+                    onTriggered: {
+                        openUrlInput.selectAll()
+                    }
+                }
+            }
         }
 
         CheckBox {
