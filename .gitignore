@@ -14,3 +14,5 @@ build/
 
 # libmpv for windows
 libmpv
+
+src/l10n/*.ts
