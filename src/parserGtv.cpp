@@ -45,11 +45,20 @@ void ParserGTV::runParser(const QUrl& url)
     result.title = id;
 
     /* certain range:
-    >= 0x600bc7b8 : group6  // video/id=600bc7b887fabe2daf3fd61f
-    <= 0x600bbe5e : group5  // getter/600bbe5e87fabe2daf3fd0e6   */
+    0x6057baed <= t : group7              // video/id=6057baeda26ac57138e09ffb
+    0x600bc7b8 <= t <= 6057b28a : group6  // video/id=6057b28aa26ac57138e09a0a
+                                          // video/id=600bc7b887fabe2daf3fd61f
+    t <= 0x600bbe5e : group5              // getter/600bbe5e87fabe2daf3fd0e6  */
+    char gid;
+    if (value < 0x600bc000)
+        gid = '5';
+    else if (value < 0x6057b600)
+        gid = '6';
+    else
+        gid = '7';
     QDateTime time = QDateTime::fromSecsSinceEpoch(value, Qt::UTC);
     QString m3u8 = QStringLiteral("https://filegroup.gtv.org/group") +
-                   QLatin1Char(value < 0x600bc000 ? '5' : '6') +
+                   QLatin1Char(gid) +
                    QStringLiteral("/vm3u8/") +
                    time.toString(QStringLiteral("yyyyMMdd/hh/mm/")) + id +
                    QStringLiteral("/hls.m3u8");
